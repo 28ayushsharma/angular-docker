@@ -4,7 +4,7 @@ services:
 
 
 before_install:
-    - docker build -t 28ayushsharma/docker-angular -f Dockerfile.dev .
+    - docker build -t 28ayushsharma/angular-docker -f Dockerfile.dev .
 
 scripts:
-    - docker run 28ayushsharma/docker-angular npm run test -- --no-watch --code-coverage
+    - docker run 28ayushsharma/angular-docker npm run test -- --no-watch --code-coverage
