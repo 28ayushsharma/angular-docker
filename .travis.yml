@@ -1,0 +1,10 @@
+sudo: required
+services:
+    - docker
+
+
+before_install:
+    - docker build -t 28ayushsharma/docker-angular -f Dockerfile.dev .
+
+scripts:
+    - docker run 28ayushsharma/docker-angular npm run test
